@@ -115,3 +115,19 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+alias gs="git status --short"
+alias gd="git diff"
+
+alias ga="git add"
+alias gc="git commit"
+
+alias gp="git push"
+alias gu="git pull"
+
+alias gl="git log"
+alias gb="git branch"
+alias gco="git checkout"
+
+alias gi="git init"
+alias gcl="git clone"
