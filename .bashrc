@@ -116,20 +116,31 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias gs="git status --short"
-alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
+# Env vars for git
+
+export PAGER="less"
+export GPG_TTY=$(tty)
+
+# Git Alias
 
 alias ga="git add"
-alias gap = "git add --patch"
+alias gap="git add --patch"
+alias gb="git branch"
+alias gba="gb --all"
 alias gc="git commit"
-
+alias gca="gc --amend --no-edit"
+alias gce="gc --amend"
+alias gco="git checkout"
+alias gcl="git clone --recursive"
+alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
+alias gds="gd --staged"
+alias gi="git init"
+alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n'"
+alias gm="git merge"
+alias gn="git checkout -b"
 alias gp="git push"
+alias gr="git reset"
+alias gs="git status --short"
 alias gu="git pull"
 
-alias gl="git log --all --graph --pretty=\
-  format: '%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n'"
-alias gb="git branch"
-alias gco="git checkout"
-
-alias gi="git init"
-alias gcl="git clone"
+gcm() { git commit --message "$*"; }
