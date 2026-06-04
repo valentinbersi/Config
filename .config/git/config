@@ -51,6 +51,9 @@
   followTags = true # push also tags
   gpgSign = false
 
+[fetch]
+  prune = true
+
 [pull]
   rebase = true
 
