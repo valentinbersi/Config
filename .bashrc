@@ -121,6 +121,9 @@ fi
 export PAGER="less"
 export GPG_TTY=$(tty)
 
+# Editor alias
+alias zed='env -u WAYLAND_DISPLAY ~/.local/bin/zed'
+
 # Git Alias
 
 alias ga="git add"
