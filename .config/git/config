@@ -12,6 +12,7 @@
   compression = 9 # Trade cpu for network
   whitespace = error
   preloadindex = true
+  editor = "zed --wait"
 
 [advice] # disable advices
   addEmptyPathspec = false
